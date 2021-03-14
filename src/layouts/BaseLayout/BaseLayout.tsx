@@ -20,7 +20,7 @@ export const BaseLayout: React.FC<BaseLayoutProps> = ({
     <Header />
     <main className={cx(s.root, className)}>
       {children}
-      <Container>
+      <Container className={s.container}>
         <Row className={s.row}>
           <Socials className={s.socials} />
         </Row>

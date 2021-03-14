@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   let description = DEFAULT_SEO.DESCRIPTION;
   if (router.locale === 'zh') {
     description = DEFAULT_SEO.DESCRIPTION_ZH;
-  } else if (router.locale === 'zh') {
+  } else if (router.locale === 'ru') {
     description = DEFAULT_SEO.DESCRIPTION_RU;
   }
 
