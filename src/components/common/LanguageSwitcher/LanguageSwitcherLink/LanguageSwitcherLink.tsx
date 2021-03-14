@@ -1,30 +1,30 @@
 import React from 'react';
 import cx from 'classnames';
 import { useRouter } from 'next/router';
-import Link, { LinkProps } from 'next/link';
+import Link from 'next/link';
 
-import s from './HeaderLink.module.sass';
+import s from './LanguageSwitcherLink.module.sass';
 
-type HeaderLinkProps = {
+type LanguageSwitcherLinkProps = {
   className?: string
-} & LinkProps;
+  locale: string
+};
 
-export const HeaderLink: React.FC<HeaderLinkProps> = ({
+export const LanguageSwitcherLink: React.FC<LanguageSwitcherLinkProps> = ({
   className,
-  href,
+  locale,
   children,
-  ...props
 }) => {
   const router = useRouter();
 
   const compoundClassname = cx(
     s.root,
-    { [s.active]: router.pathname === href },
+    { [s.active]: router.locale === locale },
     className,
   );
 
   return (
-    <Link href={href} {...props}>
+    <Link href={`${router.pathname}`} locale={locale}>
       <a className={compoundClassname}>
         {children}
       </a>
