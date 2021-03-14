@@ -1,14 +1,34 @@
+@import "@styles/variables"
+
 .root
   position: fixed
   top: 0
   left: 0
   width: 100%
-  height: 70px
-  display: flex
-  justify-content: center
-  align-items: center
-  z-index: 5
+  height: 100px
+  z-index: 10
+
+.row
+  position: relative
+
+.signature
+  font-family: $font-signature
+  position: absolute
+  top: 25px
+  left: 0
+  font-size: 60px
+  transform: rotate(-15deg)
+
+.nav
+  margin-left: auto
+  margin-right: auto
 
 .link
   &:not(:last-of-type)
     margin-right: 20px
+
+.switcher
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
