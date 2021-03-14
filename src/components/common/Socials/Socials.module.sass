@@ -1,0 +1,20 @@
+@import "@styles/variables"
+@import "@styles/breakpoints"
+
+.root
+  display: flex
+  flex-direction: column
+  z-index: 10
+
+.link
+  padding: 10px
+  margin: -10px
+  &:not(:last-of-type)
+    margin-bottom: 30px
+  svg
+    path
+      transition: fill $animationTime
+  &:hover
+    svg
+      path
+        fill: $accent
